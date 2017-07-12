@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+.form-container {
+    margin-left: 10%;
+    width: 80%;
+    border: 2px solid yellow;
+    background-color: red;
+}
+
+.form-element:first-child {
+    margin-left: 2.5%;
+}
+
+.form-element {
+    display: inline-block;
+    background-color: red;
+    height: 100%;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black
+}
+
+form input {
+    width: 95%;
+}
+
+#submit {
+    width: 100%;
+}
