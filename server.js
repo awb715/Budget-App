@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const axios = require('axios');
 const hbs = require('hbs');
 const {rent} = require('./server-method');
 const {taxee} = require('./server-method');
@@ -31,7 +30,7 @@ app.post('/Info', function (req, res) {
        
         res.send(fullData);
     }).catch(function (error) {
-    res.send('fail');
+    res.render('error');
 });
     
     

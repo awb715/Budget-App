@@ -9,6 +9,7 @@ var header = {
 
 function taxee(data) {
     return new Promise((resolve, reject) => {
+       
         var income = data.income;
         var state = data.state;
         var zip = data.zip;
@@ -30,6 +31,7 @@ function taxee(data) {
             }
             resolve(taxData);
         }).catch(function (error) {
+            console.log('break');
             resolve(error);
         });
     });

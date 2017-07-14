@@ -13,6 +13,7 @@ h1 {
     color: white;
     height: 100%;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 /*Form CSS */
 
 .form-container {
-    margin:0 auto;
+    margin:100px auto;
     width: 80%;
     text-align: center;
 }
