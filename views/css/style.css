@@ -1,32 +1,77 @@
+html{
+    margin:0;
+        display:inline-block;
+}
+
 h1 {
     text-align: center;
 }
 
-.form-container {
-    margin-left: 10%;
-    width: 80%;
-    border: 2px solid yellow;
-    background-color: red;
+.header {
+    background-color: #457B9D;
+    position:relative;
+    color: white;
+    height: 100%;
+    width: 100%;
 }
 
-.form-element:first-child {
-    margin-left: 2.5%;
+body {
+  
+    color: #457B9D;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin:0;
+}
+
+
+/*Form CSS */
+
+.form-container {
+    margin:0 auto;
+    width: 80%;
+    text-align: center;
 }
 
 .form-element {
     display: inline-block;
-    background-color: red;
     height: 100%;
     width: 30%;
     margin: 0 auto;
+    ;
     text-align: center;
-    border: 2px solid black
 }
 
 form input {
-    width: 95%;
+    width: 80%;
+    text-align: center;
+    background-color: #457B9D;
+    color: white;
+}
+
+form {
+    border: 2px solid black;
+    text-align: center;
 }
 
 #submit {
-    width: 100%;
+    width: 90%;
+    text-align: center;
+}
+
+
+/*Footer*/
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width:100%;
+    background-color: #457B9D;
+    color: white;
+}
+
+
+
+.footer img {
+    width: 120px;
+    height: 45px;
 }
