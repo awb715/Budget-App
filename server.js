@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const hbs = require('hbs');
+var hbsutils = require('hbs-utils')(hbs);
 const {rent} = require('./server-method');
 const {taxee} = require('./server-method');
 var app = express();
@@ -32,11 +33,16 @@ app.post('/Info', function (req, res) {
     }).catch(function (error) {
     res.render('error');
 });
-    
-    
+  
+
     
     
 });
+
+
+    app.get('/Tool' , function(req, res){
+        res.render('send');
+    });
 app.listen(3000, function(){
     
     console.log('Server Running on Port 3000')

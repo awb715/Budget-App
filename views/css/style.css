@@ -3,29 +3,74 @@ html{
         display:inline-block;
 }
 
-h1 {
+.top span{
+    
+    font-size: 150px; 
+    
+}
+
+section{
+    padding-top: 15px;
+}
+
+h1{
+    margin-bottom: 5%;
+    margin-top:20px;
+    color:white;
+}
+
+p{
+    padding-top: 20px;
     text-align: center;
 }
 
-.header {
-    background-color: #457B9D;
-    position:relative;
-    color: white;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 50px;
+
+.top{
+    height: 100vh;
 }
 
+
+
 body {
-  
-    color: #457B9D;
+  background-color: green;
+    color: white;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin:0;
 }
+/*info CSS */
 
+.info{
+    height:100vh;
+    background-color:white;
+    color:green;
+    text-align: center;
+}
+.info h1{
+    color:green;
+}
+
+.category{
+    width:33%;
+    text-align: center;
+    background-color: red;
+    float:left;
+   
+}
 
 /*Form CSS */
+
+.form{
+    height: 100vh;
+    background-color: #f9fafc;
+    color:green;
+}
+
+
+.form p{
+    width:40%;
+    margin: 0 auto;
+}
 
 .form-container {
     margin:100px auto;
@@ -60,19 +105,15 @@ form {
 }
 
 
-/*Footer*/
 
-.footer {
-    position: fixed;
-    bottom: 0px;
-    width:100%;
+button{
+    text-align: center;
     background-color: #457B9D;
-    color: white;
+    padding:5px;
+    color:white;
+    width:40px;
+    margin: 0 auto;
+    
 }
 
 
-
-.footer img {
-    width: 120px;
-    height: 45px;
-}

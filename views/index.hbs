@@ -5,21 +5,42 @@
     <meta charset="UTF-8">
     <title>Sample Site</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" /> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/jquery.js'></script>
+    
+    </head>
 
 
    <body> 
-   {{> header}}
-    
-       
-       <div class="render">
-       
-    {{> info}}
-    
-   {{>form}}
-       </div>
 
-    {{> footer}}
+
+    
+       
+      <section class="top">
+          
+          <h1>Budget Responsibly.</h1>
+          <p> We start the budget building process by estimating what you might pay in taxes and rent depending on where you live.</p>
+      <span> <img src="images/dollar2.png"></span>
+          <p>scroll down to begin</p>
+          <div class="arrow"><span class="ion-arrow-down-a"></span></div>
+    </section>
+       <section class="info">
+           <h1>A budget for any situation</h1>
+           <div class="form-container">
+           <div class="category">a</div><div class="category">b</div><div class="category">c</div></div>
+       </section>
+    <section class="form">
+       
+        <p> Answer the questions below and we'll get you started on a monthly and yearly budget for you to follow.</p>
+           {{> form}}
+       </section>
+ 
+           
+
+
+ 
        </body>
 
 </html>
