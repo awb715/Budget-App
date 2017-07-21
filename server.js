@@ -4,6 +4,7 @@ const hbs = require('hbs');
 var hbsutils = require('hbs-utils')(hbs);
 const {rent} = require('./server-method');
 const {taxee} = require('./server-method');
+const port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.urlencoded({
     extended: true
@@ -43,7 +44,7 @@ app.post('/Info', function (req, res) {
     app.get('/Tool' , function(req, res){
         res.render('send');
     });
-app.listen(process.env.PORT||3000, function(){
+app.listen(port, function(){
     
-    console.log('Server Running on Port 3000')
+    console.log(`Server Running on ${port}`)
 });
