@@ -4,43 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample Site</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/ionicons.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript' src='/js/jquery.js'></script>
     
-    </head>
-
-
-   <body> 
-
-
     
-       
-      <section class="top">
-          
-          <h1>Budget Responsibly.</h1>
-          <p> We start the budget building process by estimating what you might pay in taxes and rent depending on where you live.</p>
-      <span> <img src="images/dollar2.png"></span>
-          <p>scroll down to begin</p>
-          <div class="arrow"><span class="ion-arrow-down-a"></span></div>
+    
+ <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <section class="top">
+        <h1>Budget Responsibly.</h1>
+        <p> We start the budget building process by estimating what you might pay in taxes and rent depending on where you live.</p> <span> <img src="images/dollar2.png"></span>
+        <p>scroll down to begin</p>
+        <div class="arrow"><i class="ion ion-arrow-down-a"></i></div>
     </section>
-       <section class="info">
-           <h1>A budget for any situation</h1>
-           <div class="form-container">
-           <div class="category">a</div><div class="category">b</div><div class="category">c</div></div>
-       </section>
+    <section class="info">
+        <h1>A Budget For Any Situation</h1>
+        <div class="form-container">
+            <div class="category"><i class="icon ion-home"></i><br><br>Moving to a new city?<br> <br>We collect data from Zillow to get you an understanding of what you might pay in rent.<br><br> Know your rent price?<br><br> Have roommates? <br><br>We take this info into account.  </div>
+            <div class="category"><i class="ion ion-card"></i><br><br>Take control of your finances <br><br>After you enter your info, we give you downloadable templates for you to print out and keep track of expenses.
+            </div>
+            <div class="category"><i class="ion ion-university"></i><br><br>If you recently graduated college and have no idea how taxes work, you're not alone. <br><br> Based of your salary and where you live, we estimates how much Uncle Sam will collect.</div>
+        </div>
+    </section>
     <section class="form">
-       
-        <p> Answer the questions below and we'll get you started on a monthly and yearly budget for you to follow.</p>
-           {{> form}}
-       </section>
- 
-           
-
-
- 
-       </body>
+        <p> Answer the questions below and we'll get you started on a monthly and yearly budget for you to follow.</p> {{> form}} </section>
+</body>
 
 </html>

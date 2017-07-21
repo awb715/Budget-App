@@ -3,18 +3,14 @@ html{
         display:inline-block;
 }
 
-.top span{
-    
-    font-size: 150px; 
-    
-}
+
 
 section{
     padding-top: 15px;
 }
 
 h1{
-    margin-bottom: 5%;
+    margin-bottom:20px;
     margin-top:20px;
     color:white;
 }
@@ -29,10 +25,24 @@ p{
     height: 100vh;
 }
 
+.ion-arrow-down-a{
+    color:green;
+    background-color: white;
+    padding:5px 10px;
+    border-radius: 50px;
+    font-size: 200%;
+    transition:all .3s;
+}
 
+.ion-arrow-down-a:hover{
+    color:white;
+    background-color: green;
+    border:1px solid white;
+
+}
 
 body {
-  background-color: green;
+ background-color: green;
     color: white;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
@@ -51,11 +61,24 @@ body {
 }
 
 .category{
-    width:33%;
+    width:30%;
+    border:2px solid green;
+    padding:5px;
+    margin:0 5px;
     text-align: center;
-    background-color: red;
+    vertical-align: middle;
     float:left;
+    height:400px;
+    color:white;
+    background-color:green;
    
+}
+
+.category i {
+    font-size:300%;
+    position:relative;
+    top :20px;
+    margin-bottom: 20px;
 }
 
 /*Form CSS */
@@ -73,7 +96,7 @@ body {
 }
 
 .form-container {
-    margin:100px auto;
+    margin:50px auto;
     width: 80%;
     text-align: center;
 }
