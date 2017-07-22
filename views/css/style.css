@@ -28,10 +28,13 @@ p{
 .ion-arrow-down-a{
     color:green;
     background-color: white;
-    padding:5px 10px;
+    padding:3px 7px;
     border-radius: 50px;
-    font-size: 200%;
+    font-size: 170%;
     transition:all .3s;
+    border:1px solid green;
+    position:relative;
+    bottom:-30px;
 }
 
 .ion-arrow-down-a:hover{
@@ -44,7 +47,7 @@ p{
 body {
  background-color: green;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: montserrat, arial, verdana;
     text-align: center;
     margin:0;
 }
@@ -62,15 +65,15 @@ body {
 
 .category{
     width:30%;
-    border:2px solid green;
+    border:1px solid green;
     padding:5px;
     margin:0 5px;
     text-align: center;
     vertical-align: middle;
     float:left;
-    height:400px;
-    color:white;
-    background-color:green;
+    height:360px;
+    color:green;
+    background-color:white;
    
 }
 
@@ -80,6 +83,8 @@ body {
     top :20px;
     margin-bottom: 20px;
 }
+
+
 
 /*Form CSS */
 
