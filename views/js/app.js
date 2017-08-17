@@ -1,7 +1,7 @@
 
 //will load the proper questions on the page
 
-var quest = ['../partials/income.hbs','../partials/state.hbs','',];
+var quest = ['../partials/income.hbs','../partials/state.hbs','../partials/zip.hbs','../partials/roomate.hbs'];
 
 var iterator=0;
 
@@ -11,16 +11,16 @@ var iterator=0;
 
 
 //creates object that gets sent to api
-function Obj(id,val){
+function Obj(name,val){
     
 event.preventDefault();
    
     
-      $('.form').load(quest[iterator]);
+      $('.form').load(quest[iterator]).addClass('animated fadeIn');
  
 
-    if(id){
-  data[id]=val;
+    if(name){
+  data[name]=val;
     console.log(data);
     }
     

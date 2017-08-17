@@ -1,10 +1,10 @@
- <div class="question">
+ <div class="question animated fadeInUp">
                 <h4>Choose your State</h4>
-      <form  onsubmit="Obj(this.income.name,this.income.value)">
-                <input type="text" name="State" list="exampleList"> 
+      <form  onsubmit="Obj(this.state.name,this.state.value)">
+                <input id="state" name="state" list="exampleList"> 
              <datalist id="exampleList">
                     <option value=""> </option>
-                    <option value="AL">Alabama</option>
+                    <option >Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
                     <option value="AR">Arkansas</option>
@@ -55,5 +55,5 @@
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
-                </datalist>         <input id="s" type="submit" value="Submit">
+                </datalist>         <input type="submit">
     </form></div>
