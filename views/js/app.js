@@ -1,35 +1,30 @@
 
 //will load the proper questions on the page
 
-var quest = ['../partials/income.hbs','','',];
+var quest = ['../partials/income.hbs','../partials/state.hbs','',];
 
 var iterator=0;
 
-function change(){
-        
-        $('.form').load(quest[iterator]);
-    };
 
 
-$("#submit").click(function(){
-    $('.form').load(quest[iterator]);
-    iterator++;
-});
-    
 
 
 
 //creates object that gets sent to api
 function Obj(id,val){
+    
 event.preventDefault();
-    console.log(id);
+   
+    
+      $('.form').load(quest[iterator]);
  
-    
-    
+
+    if(id){
   data[id]=val;
     console.log(data);
+    }
     
-   
+   iterator++;
 }
 
 

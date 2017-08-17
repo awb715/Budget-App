@@ -1,10 +1,6 @@
-<div class="form-container">
-        <form action="/Info" method="post">
-            <div class="form-element">
-                <h4>Yearly Income</h4>
-                <input type="number" name="income" placeholder="$$$" required> </div>
-            <div class="form-element">
+ <div class="question">
                 <h4>Choose your State</h4>
+      <form  onsubmit="Obj(this.income.name,this.income.value)">
                 <input type="text" name="State" list="exampleList"> 
              <datalist id="exampleList">
                     <option value=""> </option>
@@ -59,11 +55,5 @@
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
-                </datalist></div>
-            <div class="form-element">
-               
-                <h4>Zip code of rental</h4>
-                <input type="number" minlength="5" name="ZIP" placeholder="Zip code" value="" required> </div>
-            <input id="submit" type="submit" value="Submit"> </form>
-    
-</div>
+                </datalist>         <input id="s" type="submit" value="Submit">
+    </form></div>
