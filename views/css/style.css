@@ -3,19 +3,50 @@ html{
         display:inline-block;
 }
 
+header{
+    height:50px;
+    background-color:green;
+    border-bottom: 2px black;
+    margin-top: 0;
+    color:white;
+     z-index: 999;
+    
+}
 
+.header-wrap{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 999;
+       
+}
+
+header h3{
+    margin-top: 3px;
+    padding-top: 10px;
+    position: absolute;
+    left: 40px;
+
+}
+ul{
+     position: absolute;
+    right:20px;
+}
+ul li {
+    color:white;
+    display: inline-block;
+    padding-right: 10px;
+   
+    
+}
 
 section{
     padding-top: 15px;
 }
 
-h1{
-    margin-bottom:20px;
-    margin-top:20px;
-    color:white;
-}
 
-p{
+
+.top p{
     padding-top: 20px;
     text-align: center;
 }
@@ -23,73 +54,101 @@ p{
 
 .top{
     height: 100vh;
-}
-
-.ion-arrow-down-a{
+    background-color:white;
     color:green;
-    background-color: white;
-    padding:3px 7px;
-    border-radius: 50px;
-    font-size: 170%;
-    transition:all .3s;
-    border:1px solid green;
-    position:relative;
-
+    margin-top: 150px;
 }
 
-.ion-arrow-down-a:hover{
-    color:white;
-    background-color: green;
-    border:1px solid white;
-
+.top span img{
+    padding-top: 40px;
+width:170px;
+    height: 140px;
 }
+
+
+.arrow img {
+    width:100px;
+    margin-top: 100px;
+    transition: .2s;
+    
+}
+
+.arrow img:hover{
+    margin-top:95px;
+}
+
 
 body {
- background-color: green;
+
     color: white;
     font-family: montserrat, arial, verdana;
     text-align: center;
     margin:0;
+
 }
 /*info CSS */
 
 .info{
     height:100vh;
-    background-color:white;
+
     color:green;
     text-align: center;
+        padding-top: 75px;
+    width:75%;
+    margin: 0 auto;
 }
 .info h1{
     color:green;
-}
-
-.categories{
-    margin:50px auto;
-    text-align: center;
-    width:80%;
-}
-
-.category{
-    width:30%;
-    border:1px solid green;
-    padding:5px;
-    margin:0 5px;
-    text-align: center;
-    vertical-align: middle;
-    float:left;
-    height:360px;
-    color:green;
-    background-color:white;
+    margin-bottom: 50px;
    
 }
 
-.category i {
-    font-size:300%;
-  
-    top :20px;
-    margin-bottom: 20px;
 
+.info h4{
+    font-weight: 100;
+    margin-bottom: 50px;
+    
 }
+
+.info h4:last-child{
+    font-size:13px;
+    margin-top: 70px;
+   
+}
+
+.info img{
+    max-width:70%;
+    display:inline;
+    max-height: 40px;
+    margin-bottom: 20px;
+    
+        
+}
+
+
+
+.info a:link,.info a:visited {
+    
+    width:205px;
+    color:white;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 20px;
+    padding: 10px;
+ 
+    transition: .3s;
+    cursor: pointer; 
+    text-decoration: none;
+    
+   
+}
+
+.info a:active,.info a:hover{
+       color:green;
+    background-color: white; 
+    text-decoration: none;
+}
+
 
 
 
@@ -99,28 +158,23 @@ body {
     height: 100vh;
     background-color: #f9fafc;
     color:green;
+  
+}
+
+.form div {
+    margin-top: 50px;
 }
 
 
 .form p{
     width:40%;
     margin: 0 auto;
-}
-
-.form-container {
-    margin:50px auto;
-    width: 80%;
-    text-align: center;
-}
-
-.form-element {
-    display: inline-block;
-    height: 100%;
-    width: 30%;
-    margin: 0 auto;
     
-    text-align: center;
 }
+
+
+
+
 
 form input {
     width: 50%;
@@ -152,6 +206,7 @@ button{
 
 .question{
     color:green;
+    padding-top: 180px;
 }
 
 .question h1{
