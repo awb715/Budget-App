@@ -3,6 +3,8 @@ html{
         display:inline-block;
 }
 
+
+
 header{
     height:50px;
     background-color:green;
@@ -21,6 +23,15 @@ header{
        
 }
 
+.header-wrap a{
+    color:white;
+}
+
+.header-wrap a:visted{
+    color:white;
+}
+
+
 header h3{
     margin-top: 3px;
     padding-top: 10px;
@@ -28,6 +39,8 @@ header h3{
     left: 40px;
 
 }
+
+
 ul{
      position: absolute;
     right:20px;
@@ -41,7 +54,7 @@ ul li {
 }
 
 section{
-    padding-top: 15px;
+
 }
 
 
@@ -158,11 +171,13 @@ body {
     height: 100vh;
     background-color: #f9fafc;
     color:green;
+    position: relative;
   
 }
 
 .form div {
-    margin-top: 50px;
+height: 50%;
+    padding-top: 25%;
 }
 
 
@@ -212,3 +227,56 @@ button{
 .question h1{
     color:green;
 }
+
+.bar{
+     position: absolute;
+    height: 20px;
+    bottom: 70px;
+    margin: auto;
+    width: 70%;
+    margin-left: 15%;
+    color: green;
+    z-index: 10;
+    
+  
+}
+
+.bar p{
+   display: inline;
+    background-color: green;
+    color: white;
+   
+    padding: 10px;
+    margin: -4px;
+    text-align: center;
+    width: 50px;
+    border: 2px solid black;
+}
+
+
+
+.bar p:first-child{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 1;
+     
+   
+}
+
+.bar p:nth-child(2){
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    z-index: 10;
+    position: relative;
+    
+}
+
+.bar p:last-child{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+  
+}
+
+
+
