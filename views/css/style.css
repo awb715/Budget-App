@@ -20,6 +20,7 @@ header{
     top:0;
     width:100%;
     z-index: 999;
+    border-bottom: 3px solid black;
        
 }
 
@@ -51,10 +52,6 @@ ul li {
     padding-right: 10px;
    
     
-}
-
-section{
-
 }
 
 
@@ -97,6 +94,7 @@ body {
     font-family: montserrat, arial, verdana;
     text-align: center;
     margin:0;
+     
 
 }
 /*info CSS */
@@ -160,6 +158,7 @@ body {
        color:green;
     background-color: white; 
     text-decoration: none;
+    border: 1px solid black;
 }
 
 
@@ -169,7 +168,7 @@ body {
 
 .form{
     height: 100vh;
-    background-color: #f9fafc;
+
     color:green;
     position: relative;
   
@@ -219,6 +218,10 @@ button{
     
 }
 
+.tool{
+      
+}
+
 .question{
     color:green;
     padding-top: 180px;
@@ -243,40 +246,60 @@ button{
 
 .bar p{
    display: inline;
-    background-color: green;
-    color: white;
-   
+    background-color: transparent;
+    color:green;
+    font-size: 16px;
     padding: 10px;
-    margin: -4px;
+    margin: px auto;
     text-align: center;
-    width: 50px;
-    border: 2px solid black;
+    min-width: 50px;
+    border: 1px solid green;
+    z-index: 3;
+    transition: 1s;
+    cursor: not-allowed;
 }
 
 
+
+p.enter{
+    background-color:green;
+    color:white;
+    border: 2px solid black;
+    cursor:pointer;
+
+}
 
 .bar p:first-child{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    z-index: 1;
-     
+    z-index: 4;
+
+
+ 
+   
+
    
 }
 
-.bar p:nth-child(2){
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    z-index: 10;
-    position: relative;
+.bar p::first-child:after {
     
+   padding: 2px;
+    border:2px solid red;
 }
+
+
+
 
 .bar p:last-child{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 1;
+    width:80px;
+    padding-left: 12px;
+    padding-right: 20px;
   
 }
+
 
 
 

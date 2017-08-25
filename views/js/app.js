@@ -55,19 +55,42 @@ var usStates = {
 var quest = ['../partials/income.hbs', '../partials/state.hbs', '../partials/zip.hbs', '../partials/roomate.hbs'];
 var iterator = 0;
 //creates object that gets sent to api
-function Obj(name, val) {
-    event.preventDefault();
-    $('.form').load(quest[iterator]).addClass('animated fadeIn');
+function Obj(name, vale) {
+    event.preventDefault(); //prevents pg refresh
+    console.log('hit')
+    $('.form').load(quest[iterator]);
+    //loads next html question to page
     if (name) {
         if (name === "state") {
-            val = usStates[stateConvert(val)];
+            vale = usStates[stateConvert(vale)];
+            //if its the state, we convert the state name to abbrievation
         }
-        data[name] = val;
+        data[name] = vale;
+        //change or set object value
         console.log(data);
     }
-    iterator++;
+    if (iterator >= 1) {
+        $('p.enter').next().addClass('enter');
+    }
+    iterator++; //move array accessor up to next question
 }
 var data = {};
+
+function stateConvert(value) {
+    return value.split(" ").join('_').toString();
+    //eliminates spaces in state names to match data
+};
+//user can click already submitted values to load that orignal question and change it/
+function redo(q, id) {
+    q = Number(q);
+    //if the current queston on the page is not the one being clicked we then change it to the one being clicked
+    if (q + 1 != iterator) {
+        iterator++;
+        $('.form').load(quest[q], function () {
+            $('#p').val(data.income);
+        })
+    }
+}
 //page scroll sliding
 $(function () {
     $('a[href*="#"]:not([href="#"])').click(function () {
@@ -79,11 +102,7 @@ $(function () {
                     scrollTop: target.offset().top
                 }, 1000);
                 return false;
-            }
-        }
+            };
+        };
     });
 });
-
-function stateConvert(value) {
-    return value.split(" ").join('_').toString();
-}

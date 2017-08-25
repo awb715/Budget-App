@@ -51,7 +51,11 @@ app.post('/Info', function (req, res) {
 
 
     app.get('/Tool' , function(req, res){
-        res.render('tool');
+        
+        
+      res.render('tool');
+        
+        
     });
 app.listen(port, function(){
     
