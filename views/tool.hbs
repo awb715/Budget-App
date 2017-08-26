@@ -1,5 +1,5 @@
-
-
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -9,39 +9,22 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script type='text/javascript' src='/js/app.js'></script>
-    
-    
-    
-    
- <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/manifest.json">
-<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/favicon/favicon.ico">
-<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
-</head>
+    <script type='text/javascript' src='/js/app.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff"> </head>
 
-<body class="tool" >
- 
-{{> nav}}
-
-
-   
-    
-     <section  class= "animated fadeIn" >
-         
-         {{> choices}}
-   
-         <div class="form">
-        <div onclick="Obj()" id="s">begin</div>
-        
-      </div>
-        </section>
-    
-    
-   
+<body class="tool"> {{> nav}}
+    <section class="animated fadeIn"> {{> choices}}
+        <div class="form">
+            <div onclick="Obj(null)" id="s">begin</div>
+        </div>
+    </section>
 </body>
 
+</html>

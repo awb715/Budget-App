@@ -52,27 +52,35 @@ var usStates = {
 };
 //will load the proper questions on the page
 //https://github.com/kswedberg/jquery-smooth-scroll
-var quest = ['../partials/income.hbs', '../partials/state.hbs', '../partials/zip.hbs', '../partials/roomate.hbs'];
+var quest = ['../partials/income.hbs', '../partials/state.hbs', '../partials/rent.hbs', '../partials/zip.hbs', '../partials/roomate.hbs', "../partials/income.hbs"];
 var iterator = 0;
 //creates object that gets sent to api
 function Obj(name, vale) {
     event.preventDefault(); //prevents pg refresh
-    console.log('hit')
+    console.log('#'+name);
     $('.form').load(quest[iterator]);
+    
+  
+
+          
+         $('.bar p#'+name).addClass('enter'); 
+   
+    
+  
     //loads next html question to page
-    if (name) {
-        if (name === "state") {
-            vale = usStates[stateConvert(vale)];
-            //if its the state, we convert the state name to abbrievation
-        }
+    switch (name) {
+    case null:
+        break;
+    case 'state':
+        vale = usStates[stateConvert(vale)];
         data[name] = vale;
-        //change or set object value
-        console.log(data);
+        break;
+        //if its the state, we convert the state name to abbrievation
+    default:
+        data[name] = vale;
     }
-    if (iterator >= 1) {
-        $('p.enter').next().addClass('enter');
-    }
-    iterator++; //move array accessor up to next question
+    //move array accessor up to next question
+    iterator++;
 }
 var data = {};
 
@@ -82,15 +90,18 @@ function stateConvert(value) {
 };
 //user can click already submitted values to load that orignal question and change it/
 function redo(q, id) {
+        
     q = Number(q);
     //if the current queston on the page is not the one being clicked we then change it to the one being clicked
     if (q + 1 != iterator) {
-        iterator++;
         $('.form').load(quest[q], function () {
-            $('#p').val(data.income);
-        })
-    }
-}
+            $('#p').val(data[id]);
+            
+        
+        });
+        iterator = q + 1;
+    };
+};
 //page scroll sliding
 $(function () {
     $('a[href*="#"]:not([href="#"])').click(function () {

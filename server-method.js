@@ -9,7 +9,6 @@ var header = {
 
 function taxee(data) {
     return new Promise((resolve, reject) => {
-       
         var income = data.income;
         var state = data.state;
         var zip = data.zip;
@@ -38,21 +37,24 @@ function taxee(data) {
 };
 
 function rent(data) {
-    return new Promise((resolve, reject) => {
-        axios.get("https://www.quandl.com/api/v3/datasets/ZILL/Z" + data.zip + "_RMP.json?api_key=d7xQahcKCtWUC4CM1LVd").then(function (response) {
-            console.log(response.status, ' status');
-            var monthRent = response.data.dataset.data[0][1];
-            data.rent = monthRent
-            data.yearlyRent = Number(monthRent) * 12;
-            return data;
-        }).then(function (response) {
-            resolve( data);
-        }).catch(function (error) {
-            reject(error);
+    if (!data.rent) {
+        return new Promise((resolve, reject) => {
+            axios.get("https://www.quandl.com/api/v3/datasets/ZILL/Z" + data.zip + "_RMP.json?api_key=d7xQahcKCtWUC4CM1LVd").then(function (response) {
+                console.log(response.status, ' status');
+                data.monthrent = response.data.dataset.data[0][1];
+                data.indRent=data.monthrent/data.roomate;
+                data.yearlyRent = Number(data.rent) * 12;
+                return data;
+            }).then(function (response) {
+                resolve(data);
+            }).catch(function (error) {
+                reject(error);
+            });
         });
-    });
+    }else{
+        return data.yearlyRent=data.rent *12;
+    }
 }
 module.exports = {
-    taxee
-    , rent
+    taxee, rent
 };
