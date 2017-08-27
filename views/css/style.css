@@ -67,6 +67,7 @@ ul li {
 .arrow img {
     width: 100px;
     margin-top: 100px;
+    -webkit-transition: .2s;
     transition: .2s;
 }
 
@@ -123,6 +124,7 @@ body {
     border: 1px solid green;
     border-radius: 20px;
     padding: 10px;
+    -webkit-transition: .3s;
     transition: .3s;
     cursor: pointer;
     text-decoration: none;
@@ -175,7 +177,7 @@ button {
     margin: 0 auto;
 }
 
-.tool {}
+
 
 .question {
     color: green;
@@ -199,9 +201,10 @@ button {
     margin-left: 15%;
     color: green;
     z-index: 10;
+  
 }
 
-.bar p {
+.bar p{
     display: inline;
     background-color: transparent;
     color: green;
@@ -212,7 +215,9 @@ button {
     min-width: 50px;
     border: 1px solid green;
     z-index: 3;
+    -webkit-transition: 1s;
     transition: 1s;
+    pointer-events: none;
     cursor: not-allowed;
 }
 
@@ -234,18 +239,13 @@ button {
 }
 
 
-
 .bar p.enter {
     background-color: green;
     color: white;
     border: 2px solid black;
     cursor: pointer;
+    text-decoration: none;
+    pointer-events: auto;
 }
 
 
-.enter {
-    background-color: green;
-    color: white;
-    border: 2px solid black;
-    cursor: pointer;
-}

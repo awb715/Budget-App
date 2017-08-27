@@ -1,103 +1,99 @@
-var usStates = {
-    Alabama: "AL"
-    , Alaska: "AK"
-    , Arizona: "AZ"
-    , Arkansas: "AR"
-    , California: "CA"
-    , Colorado: "CO"
-    , Connecticut: "CT"
-    , Delaware: "DE"
-    , Florida: "FL"
-    , Georgia: "GA"
-    , Hawaii: "HI"
-    , Idaho: "ID"
-    , Illinois: "IL"
-    , Indiana: "IN"
-    , Iowa: "IA"
-    , Kansas: "KS"
-    , Kentucky: "KY"
-    , Louisiana: "LA"
-    , Maine: "ME"
-    , Maryland: "MD"
-    , Massachusetts: "MA"
-    , Michigan: "MI"
-    , Minnesota: "MN"
-    , Mississippi: "MS"
-    , Missouri: "MO"
-    , Montana: "MT"
-    , Nebraska: "NE"
-    , Nevada: "NV"
-    , New_Hampshire: "NH"
-    , New_Jersey: "NJ"
-    , New_Mexico: "NM"
-    , New_York: "NY"
-    , North_Carolina: "NC"
-    , North_Dakota: "ND"
-    , Ohio: "OH"
-    , Oklahoma: "OK"
-    , Oregon: "OR"
-    , Pennsylvania: "PA"
-    , Rhode_Island: "RI"
-    , South_Carolina: "SC"
-    , South_Dakota: "SD"
-    , Tennessee: "TN"
-    , Texas: "TX"
-    , Utah: "UT"
-    , Vermont: "VT"
-    , Virginia: "VA"
-    , Washington: "WA"
-    , West_Virginia: "WV"
-    , Wisconsin: "WI"
-    , Wyoming: "WY"
-};
+
+var stateAbv ={
+    "AL": "Alabama",
+    "AK": "Alaska",
+    "AS": "American Samoa",
+    "AZ": "Arizona",
+    "AR": "Arkansas",
+    "CA": "California",
+    "CO": "Colorado",
+    "CT": "Connecticut",
+    "DE": "Delaware",
+    "DC": "District Of Columbia",
+    "FM": "Federated States Of Micronesia",
+    "FL": "Florida",
+    "GA": "Georgia",
+    "GU": "Guam",
+    "HI": "Hawaii",
+    "ID": "Idaho",
+    "IL": "Illinois",
+    "IN": "Indiana",
+    "IA": "Iowa",
+    "KS": "Kansas",
+    "KY": "Kentucky",
+    "LA": "Louisiana",
+    "ME": "Maine",
+    "MH": "Marshall Islands",
+    "MD": "Maryland",
+    "MA": "Massachusetts",
+    "MI": "Michigan",
+    "MN": "Minnesota",
+    "MS": "Mississippi",
+    "MO": "Missouri",
+    "MT": "Montana",
+    "NE": "Nebraska",
+    "NV": "Nevada",
+    "NH": "New Hampshire",
+    "NJ": "New Jersey",
+    "NM": "New Mexico",
+    "NY": "New York",
+    "NC": "North Carolina",
+    "ND": "North Dakota",
+    "MP": "Northern Mariana Islands",
+    "OH": "Ohio",
+    "OK": "Oklahoma",
+    "OR": "Oregon",
+    "PW": "Palau",
+    "PA": "Pennsylvania",
+    "PR": "Puerto Rico",
+    "RI": "Rhode Island",
+    "SC": "South Carolina",
+    "SD": "South Dakota",
+    "TN": "Tennessee",
+    "TX": "Texas",
+    "UT": "Utah",
+    "VT": "Vermont",
+    "VI": "Virgin Islands",
+    "VA": "Virginia",
+    "WA": "Washington",
+    "WV": "West Virginia",
+    "WI": "Wisconsin",
+    "WY": "Wyoming"
+}
 //will load the proper questions on the page
 //https://github.com/kswedberg/jquery-smooth-scroll
 var quest = ['../partials/income.hbs', '../partials/state.hbs', '../partials/rent.hbs', '../partials/zip.hbs', '../partials/roomate.hbs', "../partials/income.hbs"];
 var iterator = 0;
 //creates object that gets sent to api
-function Obj(name, vale) {
+function Obj(name, vale){
+    
     event.preventDefault(); //prevents pg refresh
-    console.log('#'+name);
-    $('.form').load(quest[iterator]);
-    
-  
 
-          
-         $('.bar p#'+name).addClass('enter'); 
-   
-    
-  
+    $('.form').load(quest[iterator], function () {
+        $('.bar p#' + name).css("border","2px solid black").addClass('enter').next().css({"border":"2px solid black","pointer-events":"auto","cursor":"pointer"});
+    });
     //loads next html question to page
-    switch (name) {
-    case null:
-        break;
-    case 'state':
-        vale = usStates[stateConvert(vale)];
-        data[name] = vale;
-        break;
-        //if its the state, we convert the state name to abbrievation
-    default:
+   if(name){
+   
         data[name] = vale;
     }
     //move array accessor up to next question
     iterator++;
+    
+    console.log(data);
 }
 var data = {};
 
-function stateConvert(value) {
-    return value.split(" ").join('_').toString();
-    //eliminates spaces in state names to match data
-};
+
 //user can click already submitted values to load that orignal question and change it/
 function redo(q, id) {
-        
     q = Number(q);
     //if the current queston on the page is not the one being clicked we then change it to the one being clicked
     if (q + 1 != iterator) {
         $('.form').load(quest[q], function () {
-            $('#p').val(data[id]);
             
-        
+          
+            $('#p').val(data[id]);
         });
         iterator = q + 1;
     };
