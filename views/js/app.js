@@ -1,4 +1,3 @@
-
 var stateAbv ={
     "AL": "Alabama",
     "AK": "Alaska",
