@@ -80,6 +80,7 @@ body {
     font-family: montserrat, arial, verdana;
     text-align: center;
     margin: 0;
+    z-index: 10;
 }
 
 
@@ -145,17 +146,24 @@ body {
     height: 100vh;
     color: green;
     position: relative;
+  
+    
 }
 
 .form div {
-    height: 50%;
-    padding-top: 25%;
+    padding-top: 100px;
+
 }
 
 .form p {
-    width: 40%;
     margin: 0 auto;
+    margin: 20px auto;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
+
+
+
 
 form input {
     width: 50%;
@@ -178,7 +186,7 @@ button {
 }
 
 
-
+/*Template Styling */
 .question {
     color: green;
     padding-top: 180px;
@@ -190,7 +198,26 @@ button {
 
 
 
+.rentanswer p{
+    width:70px;
+    padding:10px;
+    margin: 15px;
+    border:1px solid green;
+    color: green;
+    border-radius: 10px;
+    display: inline-block;
+   
+}
 
+.rentanswer p:hover{
+  
+    color:white;
+    background-color:green;
+}
+
+
+
+/*Question Bar */
 
 .bar {
     position: absolute;
@@ -200,33 +227,47 @@ button {
     width: 70%;
     margin-left: 15%;
     color: green;
-    z-index: 10;
+    
+    z-index: 1000;
+
+    
+    
+   
+    
   
 }
 
 .bar p{
     display: inline;
-    background-color: transparent;
+   
     color: green;
     font-size: 16px;
     padding: 10px;
-    margin: px auto;
+    margin: 0px auto;
     text-align: center;
     min-width: 50px;
     border: 1px solid green;
     z-index: 3;
     -webkit-transition: 1s;
     transition: 1s;
-    pointer-events: none;
+      pointer-events: none;
     cursor: not-allowed;
+  
+   
+    
+
+
 }
+
 
 
 
 .bar p:first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    z-index: 4;
+    pointer-events: auto;
+
+  
 }
 
 .bar p:last-child {
@@ -245,7 +286,11 @@ button {
     border: 2px solid black;
     cursor: pointer;
     text-decoration: none;
-    pointer-events: auto;
+    
+
+  
 }
+
+
 
 
