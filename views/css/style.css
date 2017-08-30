@@ -250,12 +250,8 @@ button {
     z-index: 3;
     -webkit-transition: 1s;
     transition: 1s;
-      pointer-events: none;
     cursor: not-allowed;
-  
-   
-    
-
+    pointer-events: all;
 
 }
 
@@ -265,7 +261,7 @@ button {
 .bar p:first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    pointer-events: auto;
+   
 
   
 }
@@ -288,7 +284,11 @@ button {
     text-decoration: none;
     
 
-  
+}
+
+.bar p.next{
+    border: 2px solid black;
+    cursor: pointer;
 }
 
 
