@@ -1,6 +1,10 @@
 html {
     margin: 0;
     display: inline-block;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
 header {
@@ -289,6 +293,10 @@ button {
 .bar p.next{
     border: 2px solid black;
     cursor: pointer;
+}
+
+.green{
+    color:green;
 }
 
 
