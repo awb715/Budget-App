@@ -81,7 +81,7 @@ function redirect(){
     styler('roommate');
     
  
-    console.log(data + ' re');
+
 $.ajax({
 						type: 'POST',
 						data: data,
@@ -91,6 +91,7 @@ $.ajax({
                             
                             console.log(data, 'h');
                             $('.form').html(html);
+                            $('.bar').load("../partials/options.hbs");
                         }
                     });
     
